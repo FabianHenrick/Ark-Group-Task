@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { GenericContainer } from "../components/GenericComponent/styles";
 export const TaskTamingContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -14,9 +14,23 @@ export const TaskList = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const BaseList = styled.div`
+  display: flex;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+`;
 export const BaseContainer = styled.div`
   margin: 0 2rem;
   height: 450px;
+
+  ${GenericContainer} {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+  }
 `;
 
 export const MembersContainer = styled.div`

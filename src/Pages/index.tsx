@@ -5,6 +5,7 @@ import {
   MembersContainer,
   TaskTamingContainer,
   TaskList,
+  BaseList,
 } from "./styles";
 
 export function Home() {
@@ -39,15 +40,16 @@ export function Home() {
       <BaseContainer>
         <TaskList>
           <TittleDiv>
-            <h2>Basess</h2>
+            <h2>Bases</h2>
             <button>
               <strong>+</strong>
             </button>
           </TittleDiv>{" "}
-          <div>
+          <BaseList>
             <GenericComponent />
             <GenericComponent />
-          </div>
+            <GenericComponent />
+          </BaseList>
         </TaskList>
       </BaseContainer>
       <MembersContainer>
