@@ -1,15 +1,69 @@
-import { GenericList } from "../components/GenercContainer";
-import { TaskTamingContainer } from "./styles";
+import { GenericComponent } from "../components/GenericComponent";
+import {
+  TittleDiv,
+  BaseContainer,
+  MembersContainer,
+  TaskTamingContainer,
+  TaskList,
+} from "./styles";
 
 export function Home() {
   return (
     <body>
       <TaskTamingContainer>
-        <GenericList listName="Lista de Tarefas" />
-        <GenericList listName="Dinos para Tamar" />
+        <TaskList>
+          <TittleDiv>
+            <h2>Lista de Tarefas</h2>
+            <button>
+              <strong>+</strong>
+            </button>
+          </TittleDiv>{" "}
+          <div>
+            <GenericComponent />
+            <GenericComponent />
+          </div>
+        </TaskList>
+        <TaskList>
+          <TittleDiv>
+            <h2>Dinos para Tamar</h2>
+            <button>
+              <strong>+</strong>
+            </button>
+          </TittleDiv>{" "}
+          <div>
+            <GenericComponent />
+            <GenericComponent />
+          </div>
+        </TaskList>
       </TaskTamingContainer>
-      <GenericList listName="Bases Ativas" />
-      <GenericList listName="Membros" />
+      <BaseContainer>
+        <TaskList>
+          <TittleDiv>
+            <h2>Basess</h2>
+            <button>
+              <strong>+</strong>
+            </button>
+          </TittleDiv>{" "}
+          <div>
+            <GenericComponent />
+            <GenericComponent />
+          </div>
+        </TaskList>
+      </BaseContainer>
+      <MembersContainer>
+        <TaskList>
+          <TittleDiv>
+            <h2>Membros</h2>
+            <button>
+              <strong>+</strong>
+            </button>
+          </TittleDiv>{" "}
+          <div>
+            <GenericComponent />
+            <GenericComponent />
+          </div>
+        </TaskList>
+      </MembersContainer>
     </body>
   );
 }
