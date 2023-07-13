@@ -6,4 +6,9 @@ export const HeaderContent = styled.div`
   text-align: center;
   padding: 2rem;
   gap: 1rem;
+
+  div {
+    justify-content: center;
+    display: flex;
+  }
 `;

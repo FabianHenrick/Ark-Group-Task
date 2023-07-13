@@ -30,6 +30,10 @@ export const BaseContainer = styled.div`
     flex-direction: column;
     height: 400px;
     width: 400px;
+    div {
+      width: 80%;
+      margin-right: 15px;
+    }
   }
 `;
 export const AccountsList = styled.div`
