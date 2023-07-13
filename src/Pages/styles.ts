@@ -32,11 +32,26 @@ export const BaseContainer = styled.div`
     width: 400px;
   }
 `;
+export const AccountsList = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
 
-export const MembersContainer = styled.div`
+export const OnlineAccounts = styled.div`
   margin: 2rem;
-  flex: 1;
   height: 200px;
+
+  ${GenericContainer} {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+
+    img {
+      outline: solid green 5px;
+      border-radius: 50%;
+    }
+  }
 `;
 
 export const TittleDiv = styled.div`

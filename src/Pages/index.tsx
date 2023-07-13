@@ -2,10 +2,11 @@ import { GenericComponent } from "../components/GenericComponent";
 import {
   TittleDiv,
   BaseContainer,
-  MembersContainer,
   TaskTamingContainer,
   TaskList,
+  AccountsList,
   BaseList,
+  OnlineAccounts,
 } from "./styles";
 
 export function Home() {
@@ -52,20 +53,26 @@ export function Home() {
           </BaseList>
         </TaskList>
       </BaseContainer>
-      <MembersContainer>
+      <OnlineAccounts>
         <TaskList>
           <TittleDiv>
-            <h2>Membros</h2>
+            <h2>Contas Ativas</h2>
             <button>
               <strong>+</strong>
             </button>
           </TittleDiv>{" "}
-          <div>
+          <AccountsList>
             <GenericComponent />
             <GenericComponent />
-          </div>
+            <GenericComponent />
+            <GenericComponent />
+            <GenericComponent />
+            <GenericComponent />
+            <GenericComponent />
+            <GenericComponent />
+          </AccountsList>
         </TaskList>
-      </MembersContainer>
+      </OnlineAccounts>
     </body>
   );
 }
