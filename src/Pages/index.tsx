@@ -1,6 +1,5 @@
 import { TaskTamingContainer } from "./styles";
-import { BasesList } from "../components/BasesList";
-import { BaseContainer } from "../components/BasesList/styled";
+import { BasesLister } from "../components/BasesList";
 import { AccountList } from "../components/AccountList/";
 import { TasksLister } from "../components/TaskList";
 import { TamingLister } from "../components/TamingList";
@@ -12,9 +11,7 @@ export function Home() {
         <TasksLister />
         <TamingLister />
       </TaskTamingContainer>
-      <BaseContainer>
-        <BasesList />
-      </BaseContainer>
+      <BasesLister />
       <AccountList />
     </body>
   );

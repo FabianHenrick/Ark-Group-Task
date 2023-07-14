@@ -1,5 +1,5 @@
 import { GenericComponent } from "../GenericComponent";
-import { AccountsList, OnlineAccounts } from "./styled";
+import { OnlineAccounts } from "./styled";
 import { TittleDiv } from "../../Pages/styles";
 import { useState } from "react";
 
@@ -18,11 +18,11 @@ export function AccountList() {
           <strong>+</strong>
         </button>
       </TittleDiv>
-      <AccountsList>
+      <li>
         {accounts.map((accounts) => {
           return <GenericComponent />;
         })}
-      </AccountsList>
+      </li>
     </OnlineAccounts>
   );
 }

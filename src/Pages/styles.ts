@@ -3,10 +3,8 @@ import styled from "styled-components";
 export const TaskTamingContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 2rem;
+  padding-top: 2rem;
   flex: 1;
-  gap: 1rem;
-  height: 400px;
 `;
 
 export const TittleDiv = styled.div`

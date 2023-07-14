@@ -1,4 +1,4 @@
-import { ListContainer, TamingList } from "./styles";
+import { TamingList } from "./styles";
 import { TittleDiv } from "../../Pages/styles";
 import { useState } from "react";
 import { GenericComponent } from "../GenericComponent";
@@ -18,11 +18,11 @@ export function TamingLister() {
           <strong>+</strong>
         </button>
       </TittleDiv>
-      <ListContainer>
+      <li>
         {tamings.map((tamings) => {
           return <GenericComponent />;
         })}
-      </ListContainer>
+      </li>
     </TamingList>
   );
 }

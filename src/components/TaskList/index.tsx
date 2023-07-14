@@ -2,7 +2,6 @@ import { GenericComponent } from "../GenericComponent";
 import { TittleDiv } from "../../Pages/styles";
 import { TaskList } from "./styles";
 import { useState } from "react";
-import { ListContainer } from "../TamingList/styles";
 
 export function TasksLister() {
   const [tasks, setNewTasks] = useState<number[]>([]);
@@ -19,11 +18,11 @@ export function TasksLister() {
           <strong>+</strong>
         </button>
       </TittleDiv>
-      <ListContainer>
+      <li>
         {tasks.map((tasks) => {
           return <GenericComponent />;
         })}
-      </ListContainer>
+      </li>
     </TaskList>
   );
 }

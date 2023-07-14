@@ -2,14 +2,13 @@ import styled from "styled-components";
 import { GenericContainer } from "../GenericComponent/styles";
 
 export const BaseList = styled.div`
-  display: flex;
-  overflow: auto;
-  height: 100%;
-  width: 100%;
-`;
-export const BaseContainer = styled.div`
-  margin: 0 2rem;
-  height: 450px;
+  margin: 2rem;
+  li {
+    display: flex;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+  }
 
   ${GenericContainer} {
     display: flex;

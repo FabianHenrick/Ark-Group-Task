@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { GenericComponent } from "../GenericComponent";
 import { TittleDiv } from "../../Pages/styles";
-import { BaseList } from "./styled";
+import { BaseList } from "./styles";
 
-export function BasesList() {
+export function BasesLister() {
   const [bases, setBases] = useState<number[]>([]);
 
   function handleCreateNewBase() {
@@ -11,18 +11,18 @@ export function BasesList() {
   }
 
   return (
-    <div>
+    <BaseList>
       <TittleDiv>
         <h2>Bases</h2>
         <button onClick={handleCreateNewBase}>
           <strong>+</strong>
         </button>
       </TittleDiv>
-      <BaseList>
+      <li>
         {bases.map((bases) => {
           return <GenericComponent />;
         })}
-      </BaseList>
-    </div>
+      </li>
+    </BaseList>
   );
 }

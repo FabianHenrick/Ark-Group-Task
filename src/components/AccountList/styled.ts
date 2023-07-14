@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import { GenericContainer } from "../GenericComponent/styles";
 
-export const AccountsList = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
-
 export const OnlineAccounts = styled.div`
   margin: 2rem;
-  height: 200px;
+  li {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    max-height: 250px;
+    list-style-type: none;
+    overflow: auto;
+  }
 
   ${GenericContainer} {
     display: flex;
