@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GenericContainer } from "../components/GenericComponent/styles";
+
 export const TaskTamingContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -7,55 +7,6 @@ export const TaskTamingContainer = styled.div`
   flex: 1;
   gap: 1rem;
   height: 300px;
-`;
-
-export const TaskList = styled.div`
-  margin: 0 2rem;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const BaseList = styled.div`
-  display: flex;
-  overflow: auto;
-  height: 100%;
-  width: 100%;
-`;
-export const BaseContainer = styled.div`
-  margin: 0 2rem;
-  height: 450px;
-
-  ${GenericContainer} {
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    width: 400px;
-    div {
-      width: 80%;
-      margin-right: 15px;
-    }
-  }
-`;
-export const AccountsList = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
-
-export const OnlineAccounts = styled.div`
-  margin: 2rem;
-  height: 200px;
-
-  ${GenericContainer} {
-    display: flex;
-    flex-direction: column;
-    width: 120px;
-    height: 120px;
-
-    img {
-      outline: solid green 5px;
-      border-radius: 50%;
-    }
-  }
 `;
 
 export const TittleDiv = styled.div`
