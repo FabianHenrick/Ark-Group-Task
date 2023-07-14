@@ -6,7 +6,7 @@ export const TaskTamingContainer = styled.div`
   padding: 2rem;
   flex: 1;
   gap: 1rem;
-  height: 300px;
+  height: 400px;
 `;
 
 export const TittleDiv = styled.div`

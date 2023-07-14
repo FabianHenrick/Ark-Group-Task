@@ -6,6 +6,6 @@ export const TaskList = styled.div`
   flex-direction: column;
 `;
 export const ListContainer = styled.div`
-  height: 200px;
+  height: 300px;
   overflow: auto;
 `;

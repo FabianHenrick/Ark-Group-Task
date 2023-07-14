@@ -7,6 +7,6 @@ export const TamingList = styled.div`
 `;
 
 export const ListContainer = styled.div`
-  height: 200px;
+  height: 300px;
   overflow: auto;
 `;
