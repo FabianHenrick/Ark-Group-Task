@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { GenericComponent } from "../components/GenericComponent";
 import {
   TittleDiv,
@@ -10,6 +11,12 @@ import {
 } from "./styles";
 
 export function Home() {
+  const [bases, setBases] = useState([0]);
+
+  function handleCreateNewBase() {
+    setBases([...bases, bases.length + 1]);
+  }
+
   return (
     <body>
       <TaskTamingContainer>
@@ -42,14 +49,14 @@ export function Home() {
         <TaskList>
           <TittleDiv>
             <h2>Bases</h2>
-            <button>
+            <button onClick={handleCreateNewBase}>
               <strong>+</strong>
             </button>
           </TittleDiv>{" "}
           <BaseList>
-            <GenericComponent />
-            <GenericComponent />
-            <GenericComponent />
+            {bases.map((bases) => {
+              return <GenericComponent />;
+            })}
           </BaseList>
         </TaskList>
       </BaseContainer>
