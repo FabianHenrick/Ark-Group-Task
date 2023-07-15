@@ -1,7 +1,9 @@
 import { GenericComponent } from "../GenericComponent";
-import { OnlineAccounts } from "./styled";
+import { OnlineAccounts } from "./styles";
 import { TittleDiv } from "../../Pages/styles";
 import { useState } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { NewAccountModal } from "./NewAccountModal";
 
 export function AccountList() {
   const [accounts, setNewAccount] = useState<number[]>([]);
@@ -14,9 +16,14 @@ export function AccountList() {
     <OnlineAccounts>
       <TittleDiv>
         <h2>Contas Ativas</h2>
-        <button onClick={handleCreateNewAccount}>
-          <strong>+</strong>
-        </button>
+        <Dialog.Root>
+          <Dialog.Trigger asChild>
+            <button>
+              <strong>+</strong>
+            </button>
+          </Dialog.Trigger>
+          <NewAccountModal />
+        </Dialog.Root>
       </TittleDiv>
       <li>
         {accounts.map((accounts) => {
