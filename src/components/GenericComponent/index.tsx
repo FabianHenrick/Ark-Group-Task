@@ -1,9 +1,9 @@
 import { Trash } from "phosphor-react";
 import { GenericContainer } from "./styles";
-export function GenericComponent() {
+export function GenericComponent(props:any) {
   return (
     <GenericContainer>
-      <img src="https://i.pinimg.com/474x/07/4e/1e/074e1e1f95d24184fcf628bb5b9239ad.jpg" />
+      <img src={props.} />
       <div>
         <p> Dinosfauro</p>
         <button>

@@ -9,9 +9,9 @@ export function AccountList() {
   const [accounts, setNewAccount] = useState<number[]>([]);
 
   function handleCreateNewAccount() {
+    console.log("Nova conta Cadastrada");
     setNewAccount([...accounts, accounts.length + 1]);
   }
-
   return (
     <OnlineAccounts>
       <TittleDiv>
@@ -22,7 +22,7 @@ export function AccountList() {
               <strong>+</strong>
             </button>
           </Dialog.Trigger>
-          <NewAccountModal />
+          <NewAccountModal handleSubmit={handleCreateNewAccount} />
         </Dialog.Root>
       </TittleDiv>
       <li>
