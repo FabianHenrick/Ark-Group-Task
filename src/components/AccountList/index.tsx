@@ -9,8 +9,8 @@ export function AccountList() {
   const [accounts, setNewAccount] = useState<number[]>([]);
 
   function handleCreateNewAccount() {
-    console.log("Nova conta Cadastrada");
     setNewAccount([...accounts, accounts.length + 1]);
+    console.log("Cadastrado");
   }
   return (
     <OnlineAccounts>

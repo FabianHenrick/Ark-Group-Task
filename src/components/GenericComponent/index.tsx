@@ -1,11 +1,18 @@
 import { Trash } from "phosphor-react";
 import { GenericContainer } from "./styles";
-export function GenericComponent(props:any) {
+
+interface GenericComponentProps {
+  imgSrc: string;
+  name: string;
+  isActive?: boolean;
+}
+
+export function GenericComponent(props: GenericComponentProps) {
   return (
     <GenericContainer>
-      <img src={props.} />
+      <img src={props.imgSrc} />
       <div>
-        <p> Dinosfauro</p>
+        <p>{props.name}</p>
         <button>
           <Trash size={20} />
         </button>

@@ -12,7 +12,7 @@ export function NewAccountModal(props: any) {
         <form action="">
           <input type="file"></input>
           <input type="text" placeholder="Nome da Conta"></input>
-          <button type="submit" onClick={props.handleSubmit}>
+          <button type="submit" onSubmit={props.handleSubmit()}>
             Cadastrar
           </button>
         </form>
