@@ -6,13 +6,13 @@ import { TamingLister } from "../components/TamingList";
 
 export function Home() {
   return (
-    <body>
+    <div>
       <TaskTamingContainer>
         <TasksLister />
         <TamingLister />
       </TaskTamingContainer>
       <BasesLister />
       <AccountList />
-    </body>
+    </div>
   );
 }

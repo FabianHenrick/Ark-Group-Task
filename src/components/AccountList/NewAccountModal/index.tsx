@@ -9,12 +9,10 @@ export function NewAccountModal(props: any) {
 
       <Content>
         <Dialog.Title>Nova Conta</Dialog.Title>
-        <form action="">
+        <form action="" onSubmit={props.handleSubmit}>
           <input type="file"></input>
           <input type="text" placeholder="Nome da Conta"></input>
-          <button type="submit" onSubmit={props.handleSubmit()}>
-            Cadastrar
-          </button>
+          <button type="submit">Cadastrar</button>
         </form>
         <CloseButton>
           <X />

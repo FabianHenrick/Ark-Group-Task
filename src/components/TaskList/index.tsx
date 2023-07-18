@@ -20,7 +20,13 @@ export function TasksLister() {
       </TittleDiv>
       <li>
         {tasks.map((tasks) => {
-          return <GenericComponent />;
+          return (
+            <GenericComponent
+              key={1}
+              name="Dinosfauro"
+              imgSrc="https://qph.cf2.quoracdn.net/main-qimg-c803e5912e045867b4e2f033c1b57ff9-lq"
+            />
+          );
         })}
       </li>
     </TaskList>

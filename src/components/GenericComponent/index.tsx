@@ -2,6 +2,7 @@ import { Trash } from "phosphor-react";
 import { GenericContainer } from "./styles";
 
 interface GenericComponentProps {
+  key: number;
   imgSrc?: string;
   name: string;
   isActive?: boolean;
