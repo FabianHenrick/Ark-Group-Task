@@ -2,7 +2,11 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "phosphor-react";
 import { Content, Overlay, CloseButton } from "./styles";
 
-export function NewAccountModal() {
+interface NewAccountModalProps {
+  handleSubmit: any;
+}
+
+export function NewAccountModal(newAccountModalProps) {
   return (
     <Dialog.Portal>
       <Overlay />
@@ -12,7 +16,10 @@ export function NewAccountModal() {
         <form action="">
           <input type="file"></input>
           <input type="text" placeholder="Nome da Conta"></input>
-          <button type="submit">Cadastrar</button>
+          <button type="submit" onClick={handleSubmit}>
+            {" "}
+            Cadastrar
+          </button>
         </form>
 
         <CloseButton>

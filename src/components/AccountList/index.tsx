@@ -22,7 +22,7 @@ export function AccountList() {
               <strong>+</strong>
             </button>
           </Dialog.Trigger>
-          <NewAccountModal />
+          <NewAccountModal handleSubmit={handleCreateNewAccount} />
         </Dialog.Root>
       </TittleDiv>
       <li>
