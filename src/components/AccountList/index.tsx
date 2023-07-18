@@ -10,8 +10,8 @@ export function AccountList() {
 
   function handleCreateNewAccount() {
     setNewAccount([...accounts, accounts.length + 1]);
+    console.log("Cadastrado");
   }
-
   return (
     <OnlineAccounts>
       <TittleDiv>
@@ -27,7 +27,7 @@ export function AccountList() {
       </TittleDiv>
       <li>
         {accounts.map((accounts) => {
-          return <GenericComponent />;
+          return <GenericComponent name="Dinosfauro" />;
         })}
       </li>
     </OnlineAccounts>
