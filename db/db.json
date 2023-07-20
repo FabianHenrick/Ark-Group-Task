@@ -1,13 +1,13 @@
 {
   "accounts": [
     {
-      "id": 1,
+      "key": 1,
       "name": "emoneko",
       "imgSrc": "https://qph.cf2.quoracdn.net/main-qimg-c803e5912e045867b4e2f033c1b57ff9-lq",
       "isActive": false
     },
     {
-      "id": 2,
+      "key": 2,
       "name": "DaviDivaDeWesteros",
       "imgSrc": "https://qph.cf2.quoracdn.net/main-qimg-c803e5912e045867b4e2f033c1b57ff9-lq",
       "isActive": true

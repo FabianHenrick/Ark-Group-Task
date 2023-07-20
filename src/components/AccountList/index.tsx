@@ -13,7 +13,7 @@ interface Account {
 }
 
 export function AccountList() {
-  const [accounts, setAccounts] = useState<number[]>([]);
+  const [accounts, setAccounts] = useState<any[]>([]);
 
   async function loadAcctions() {
     fetch("http://localhost:3000/accounts")
@@ -24,7 +24,7 @@ export function AccountList() {
   }
   useEffect(() => {
     loadAcctions();
-  });
+  }, []);
 
   function handleCreateNewAccount() {
     setAccounts([...accounts, accounts.length + 1]);
@@ -47,8 +47,8 @@ export function AccountList() {
         {accounts.map((accounts) => {
           return (
             <GenericComponent
-              name="Dinosfauro"
-              key={accounts}
+              key={accounts.id}
+              name={accounts.name}
               imgSrc="https://qph.cf2.quoracdn.net/main-qimg-c803e5912e045867b4e2f033c1b57ff9-lq"
             />
           );
