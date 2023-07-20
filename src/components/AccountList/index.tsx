@@ -1,15 +1,33 @@
 import { GenericComponent } from "../GenericComponent";
 import { OnlineAccounts } from "./styles";
 import { TittleDiv } from "../../Pages/styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { NewAccountModal } from "./NewAccountModal";
 
+interface Account {
+  id: number;
+  name: string;
+  imSrc: string;
+  isActive: boolean;
+}
+
 export function AccountList() {
-  const [accounts, setNewAccount] = useState<number[]>([]);
+  const [accounts, setAccounts] = useState<number[]>([]);
+
+  async function loadAcctions() {
+    fetch("http://localhost:3000/accounts")
+      .then((response) => response.json())
+      .then((data) => {
+        setAccounts(data);
+      });
+  }
+  useEffect(() => {
+    loadAcctions();
+  });
 
   function handleCreateNewAccount() {
-    setNewAccount([...accounts, accounts.length + 1]);
+    setAccounts([...accounts, accounts.length + 1]);
   }
 
   return (
