@@ -4,9 +4,11 @@ import { Content, Overlay, CloseButton } from "./styles";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { api } from "../../../lib/axios";
 
 const newAccountFormSchema = z.object({
-  image: z.instanceof(File),
+  //image: z.instanceof(File),
+  imgSrc: z.string(),
   name: z.string(),
 });
 
@@ -17,11 +19,13 @@ export function NewAccountModal(props: any) {
     resolver: zodResolver(newAccountFormSchema),
   });
 
-  async function handleCreateNewAccount(
-    data: NewAccountFormInputs,
-    handleAcccountSubmit: any
-  ) {
-    handleAcccountSubmit(data);
+  async function handleCreateNewAccount(data: NewAccountFormInputs) {
+    const { imgSrc, name } = data;
+
+    await api.post("accounts", {
+      name,
+      imgSrc,
+    });
   }
 
   return (
@@ -32,10 +36,11 @@ export function NewAccountModal(props: any) {
         <Dialog.Title>Nova Conta</Dialog.Title>
         <form action="" onSubmit={handleSubmit(handleCreateNewAccount)}>
           <input
-            type="file"
-            accept=".png,,jpeg.jpg"
+            type="text"
+            placeholder="Digite a URL da imagem"
+            //accept=".png,jpeg.jpg"
             required
-            {...register("image")}
+            {...register("imgSrc")}
           ></input>
           <input
             type="text"

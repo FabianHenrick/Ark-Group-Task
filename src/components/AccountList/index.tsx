@@ -40,7 +40,10 @@ export function AccountList() {
               <strong>+</strong>
             </button>
           </Dialog.Trigger>
-          <NewAccountModal handleAcccountSubmit={handleCreateNewAccount} />
+          <NewAccountModal
+            handleAcccountSubmit={handleCreateNewAccount}
+            isActive={false}
+          />
         </Dialog.Root>
       </TittleDiv>
       <li>
@@ -49,7 +52,7 @@ export function AccountList() {
             <GenericComponent
               key={accounts.id}
               name={accounts.name}
-              imgSrc="https://qph.cf2.quoracdn.net/main-qimg-c803e5912e045867b4e2f033c1b57ff9-lq"
+              imgSrc={accounts.imgSrc}
             />
           );
         })}
