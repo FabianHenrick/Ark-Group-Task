@@ -7,20 +7,27 @@ export const OnlineAccounts = styled.div`
     display: flex;
     gap: 1rem;
     margin: 1rem;
-    max-height: 250px;
-    list-style-type: none;
-    overflow: auto;
+    max-height: 550px;
   }
 
   ${GenericContainer} {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    width: 120px;
-    height: 120px;
+    background: darkgray;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px #00000050;
+
+    div {
+      padding: 0 1rem;
+      border-radius: 0 0px 5px 5px;
+      background: gray;
+      display: flex;
+      justify-content: space-between;
+    }
 
     img {
-      outline: solid green 5px;
-      border-radius: 50%;
+      clip-path: circle();
     }
   }
 `;
