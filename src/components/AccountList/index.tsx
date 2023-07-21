@@ -40,7 +40,7 @@ export function AccountList() {
               <strong>+</strong>
             </button>
           </Dialog.Trigger>
-          <NewAccountModal handleSubmit={handleCreateNewAccount} />
+          <NewAccountModal handleAcccountSubmit={handleCreateNewAccount} />
         </Dialog.Root>
       </TittleDiv>
       <li>
